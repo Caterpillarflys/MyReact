@@ -9,7 +9,7 @@ function Son(props) {
   return (
     <div style={divStyle}>
       子：{props.name}
-      <button onClick={() => props.setSonName("子传父")}>子传父：</button>
+      <button onClick={() => props.setSonName("子传父")}>子传父</button>
     </div>
   );
 }
