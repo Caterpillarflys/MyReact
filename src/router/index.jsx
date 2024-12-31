@@ -1,5 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// BrowserRouter是基于 HTML5 的history API 来实现路由的，要配置nginx防止被当成http请求，
+// 否则刷新会丢失页面，这里选择用HashRouter
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../views/home/index";
 import About from "../views/about/index";
 import NavCom from "../components/nav";
@@ -34,6 +36,8 @@ const MyRouter = () => {
           element={<Dashboard />}
           loader={dashboardLoader}
         />
+
+        {/* <Route path="*" element={<Home />} /> */}
       </Routes>
       <NavCom></NavCom>
     </Router>
